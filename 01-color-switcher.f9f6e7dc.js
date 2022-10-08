@@ -1,0 +1,2 @@
+refs={startBtn:document.querySelector("[data-start]"),stopBtn:document.querySelector("[data-stop]"),body:document.querySelector("body")},refs.startBtn.addEventListener("click",(function(){idInterval=setInterval((function(){refs.body.style.backgroundColor="#".concat(Math.floor(16777215*Math.random()).toString(16))}),1e3)})),refs.stopBtn.addEventListener("click",(function(){clearInterval(idInterval)})),idInterval="";
+//# sourceMappingURL=01-color-switcher.f9f6e7dc.js.map

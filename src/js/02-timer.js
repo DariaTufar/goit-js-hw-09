@@ -3,6 +3,8 @@ import { convertMs } from './template function/02-convertMs';
 
 import 'flatpickr/dist/flatpickr.min.css';
 
+import Notiflix from 'notiflix';
+
 refs = {
   startBtn: document.querySelector('[data-start]'),
   days: document.querySelector('[data-days]'),
@@ -23,7 +25,7 @@ const options = {
     if (selectedDates[0] < new Date()) {
       refs.startBtn.disabled = true;
 
-      window.alert('Please choose a date in the future');
+      Notiflix.Notify.failure('Please choose a date in the future');
     } else {
       refs.startBtn.disabled = false;
     }

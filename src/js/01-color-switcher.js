@@ -9,14 +9,20 @@ const refs = {
 refs.startBtn.addEventListener('click', onStart);
 refs.stopBtn.addEventListener('click', onStop);
 
-idInterval = ``;
+let idInterval = null;
 
 function onStart() {
-  idInterval = setInterval(() => {
+   idInterval = setInterval(() => {
     refs.body.style.backgroundColor = getRandomHexColor();
   }, 1000);
+ refs.startBtn.setAttribute('disabled', 'disabled');
+ refs.stopBtn.removeAttribute('disabled');
 }
+ 
 
 function onStop() {
   clearInterval(idInterval);
+  
+  refs.startBtn.removeAttribute('disabled');
+  refs.stopBtn.setAttribute('disabled', 'disabled');
 }

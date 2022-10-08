@@ -1,6 +1,6 @@
 import { getRandomHexColor } from '../js/template function/01-getRandomHexColor';
 
-refs = {
+const refs = {
   startBtn: document.querySelector('[data-start]'),
   stopBtn: document.querySelector('[data-stop]'),
   body: document.querySelector('body'),
